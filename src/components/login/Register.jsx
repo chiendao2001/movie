@@ -16,7 +16,6 @@ const Register = () => {
             setStatus(false)
         } 
         
-        //
         else {
             try {
                 setStatus(true)

@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 const App = () => {
+    console.log('hello')
     return (
         <>
             <Switch>

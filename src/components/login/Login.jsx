@@ -4,7 +4,7 @@ import {Formik, Field, Form} from 'formik'
 import {useHistory, Link} from 'react-router-dom'
 
 
-const Login = props => {
+const Login =  () => {
     const [message, setMessage] = useState()
 
     const [token, setToken] = useState('')
@@ -14,8 +14,10 @@ const Login = props => {
     const history = useHistory()
     
     const validate = async (user) => {
+        console.log('yes')
         const url = 'https://limitless-wildwood-09344.herokuapp.com/login'
         const res = await axios.post(url, user)
+        console.log(res.data)
         setUsername(user.username)
         setToken(res.data)
         if (res.status === 200) return false
